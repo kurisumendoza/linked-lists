@@ -29,3 +29,5 @@ class LinkedList {
 
   toString() {}
 }
+
+export { Node, LinkedList };
