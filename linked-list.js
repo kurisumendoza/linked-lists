@@ -21,12 +21,21 @@ class LinkedList {
 
   prepend(value) {
     if (!this.list) this.append(value);
-    else {
-      this.list = new Node(value, this.head());
-    }
+    else this.list = new Node(value, this.head());
   }
 
-  size() {}
+  size() {
+    if (!this.list) return 0;
+
+    let nodeSize = 1;
+    let curNode = this.list;
+    while (curNode.nextNode !== null) {
+      curNode = curNode.nextNode;
+      nodeSize++;
+    }
+
+    return nodeSize;
+  }
 
   head() {
     if (!this.list) return null;
