@@ -83,7 +83,20 @@ class LinkedList {
     if (curNode === null) return false;
   }
 
-  find(value) {}
+  find(value) {
+    if (!this.list) return null;
+
+    let curNode = this.list;
+    let curIndex = 0;
+    while (curNode !== null) {
+      if (value === curNode.value) return curIndex;
+      else {
+        curNode = curNode.nextNode;
+        curIndex++;
+      }
+    }
+    return curNode;
+  }
 
   toString() {}
 }
