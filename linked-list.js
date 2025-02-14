@@ -52,7 +52,18 @@ class LinkedList {
     return curNode;
   }
 
-  at(index) {}
+  at(index) {
+    if (!this.list || this.size() < index) return null;
+
+    let curNode = this.list;
+    let curIndex = 0;
+    while (curIndex < index) {
+      curNode = curNode.nextNode;
+      curIndex++;
+    }
+
+    return curNode;
+  }
 
   pop() {}
 
