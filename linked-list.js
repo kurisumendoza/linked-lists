@@ -65,7 +65,11 @@ class LinkedList {
     return curNode;
   }
 
-  pop() {}
+  pop() {
+    if (!this.list) return;
+    if (this.size() === 1) this.list = null;
+    else this.at(this.size() - 2).nextNode = null;
+  }
 
   contains(value) {}
 

@@ -10,8 +10,9 @@ list.append('snake');
 list.append('turtle');
 list.prepend('eagle');
 list.prepend('monkey');
+list.pop();
 
-console.log(list.tail());
-console.log(list.head());
-console.log(list.size());
-console.log(list.at(3));
+console.log('TAIL: ', list.tail());
+console.log('HEAD: ', list.head());
+console.log('SIZE: ', list.size());
+console.log('NODE #3: ', list.at(3));
