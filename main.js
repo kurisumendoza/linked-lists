@@ -8,7 +8,8 @@ list.append('parrot');
 list.append('hamster');
 list.append('snake');
 list.append('turtle');
+list.prepend('eagle');
+list.prepend('monkey');
 
-console.log(list.toString());
 console.log(list.tail());
 console.log(list.head());

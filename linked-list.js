@@ -19,7 +19,12 @@ class LinkedList {
     else this.tail().nextNode = new Node(value);
   }
 
-  prepend(value) {}
+  prepend(value) {
+    if (!this.list) this.append(value);
+    else {
+      this.list = new Node(value, this.head());
+    }
+  }
 
   size() {}
 
@@ -46,9 +51,7 @@ class LinkedList {
 
   find(value) {}
 
-  toString() {
-    return this.list;
-  }
+  toString() {}
 }
 
 export { Node, LinkedList };
