@@ -71,7 +71,17 @@ class LinkedList {
     else this.at(this.size() - 2).nextNode = null;
   }
 
-  contains(value) {}
+  contains(value) {
+    if (!this.list) return false;
+
+    let curNode = this.list;
+    while (curNode !== null) {
+      if (curNode.value === value) return true;
+      else curNode = curNode.nextNode;
+    }
+
+    if (curNode === null) return false;
+  }
 
   find(value) {}
 
