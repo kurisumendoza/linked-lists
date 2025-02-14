@@ -98,7 +98,15 @@ class LinkedList {
     return curNode;
   }
 
-  toString() {}
+  toString() {
+    let listString = '';
+    let curNode = this.list;
+    while (curNode !== null) {
+      if (curNode.value) listString += `( ${curNode.value} ) -> `;
+      curNode = curNode.nextNode;
+    }
+    return (listString += null);
+  }
 }
 
-export { Node, LinkedList };
+export default LinkedList;

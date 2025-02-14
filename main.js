@@ -1,4 +1,4 @@
-import { Node, LinkedList } from './linked-list.js';
+import LinkedList from './linked-list.js';
 
 const list = new LinkedList();
 
@@ -20,3 +20,4 @@ console.log('CONTAINS (CAT):', list.contains('cat'));
 console.log('CONTAINS (TURTLE):', list.contains('turtle'));
 console.log('FIND (MONKEY): ', list.find('monkey'));
 console.log('FIND (TURTLE): ', list.find('turtle'));
+console.log('LOG LIST: ', list.toString());
