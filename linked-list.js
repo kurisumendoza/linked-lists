@@ -23,7 +23,10 @@ class LinkedList {
 
   size() {}
 
-  head() {}
+  head() {
+    if (!this.list) return null;
+    else return this.list;
+  }
 
   tail() {
     if (!this.list) return null;
