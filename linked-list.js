@@ -59,7 +59,7 @@ class LinkedList {
   }
 
   at(index) {
-    if (!this.list || this.size() < index) return null;
+    if (!this.list || this.size() < index || index < 0) return null;
 
     let curNode = this.list;
     let curIndex = 0;
@@ -75,6 +75,13 @@ class LinkedList {
     if (!this.list) return;
     if (this.size() === 1) this.list = null;
     else this.at(this.size() - 2).nextNode = null;
+  }
+
+  removeAt(index) {
+    if (index >= this.size() || index < 0) return;
+    else if (index === this.size() - 1) this.pop();
+    else if (index === 0) this.list = this.at(1);
+    else this.at(index - 1).nextNode = this.at(index + 1);
   }
 
   contains(value) {

@@ -12,6 +12,7 @@ list.prepend('eagle');
 list.prepend('monkey');
 list.pop();
 list.insertAt('lion', 4);
+list.removeAt(5);
 
 console.log('TAIL: ', list.tail());
 console.log('HEAD: ', list.head());
