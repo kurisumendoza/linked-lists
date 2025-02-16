@@ -24,6 +24,12 @@ class LinkedList {
     else this.list = new Node(value, this.head());
   }
 
+  insertAt(value, index) {
+    if (index >= this.size()) this.append(value);
+    else if (index <= 0) this.prepend(value);
+    else this.at(index - 1).nextNode = new Node(value, this.at(index));
+  }
+
   size() {
     if (!this.list) return 0;
 
